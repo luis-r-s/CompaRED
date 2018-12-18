@@ -45,7 +45,7 @@ class SignInViewController: UIViewController {
         if self.arrayEmails.contains(email){
             Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
                 if let error = error {
-                    print("ERrOR")
+                    print("ERROR")
                     AlertController.showAlert(self, title: "Error", message: "Error: \(error.localizedDescription)")
                     return
                 } else {
@@ -78,9 +78,9 @@ class SignInViewController: UIViewController {
         Database.database().reference().child("users").observe(.childAdded, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
             let email = value?["email"] as? String ?? ""
-            print("value = \(email)")
+//            print("value = \(email)")
             self.arrayEmails.append(email)
-            print("array: \(self.arrayEmails)")
+//            print("array: \(self.arrayEmails)")
         }, withCancel: nil)
     }
 }

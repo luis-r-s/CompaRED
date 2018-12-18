@@ -128,10 +128,10 @@ class MenuViewController: UIViewController, CLLocationManagerDelegate, MKMapView
         do {
             try firebaseAuth.signOut()
             print("Successfully sign out")
-            //            dismiss(animated: true, completion: nil)
+//                        dismiss(animated: true, completion: nil)
             performSegue(withIdentifier: "salir", sender: self)
         } catch let signOutError as NSError {
-            print ("Error signing out: ", signOutError)
+            print ("Error signing out: \(signOutError)")
         }
         
     }

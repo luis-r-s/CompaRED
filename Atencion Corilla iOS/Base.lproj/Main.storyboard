@@ -703,7 +703,7 @@
                                         </state>
                                         <connections>
                                             <action selector="SalirButtonTapped:" destination="qgm-ls-ViF" eventType="touchUpInside" id="ow7-sL-SBf"/>
-                                            <segue destination="BYZ-38-t0r" kind="show" identifier="salir" id="vpB-Dc-CmV"/>
+                                            <segue destination="BYZ-38-t0r" kind="showDetail" identifier="salir" id="9hk-u3-b2K"/>
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sign_out" translatesAutoresizingMaskIntoConstraints="NO" id="qPg-V7-cLY">
@@ -1108,6 +1108,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="30p-c7-AMJ"/>
-        <segue reference="vpB-Dc-CmV"/>
+        <segue reference="9hk-u3-b2K"/>
     </inferredMetricsTieBreakers>
 </document>
