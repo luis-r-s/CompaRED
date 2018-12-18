@@ -56,6 +56,7 @@ class MenuViewController: UIViewController, CLLocationManagerDelegate, MKMapView
         guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
         print("locations = \(locValue.latitude) \(locValue.longitude)")
         self.currentLocation = "(\(locValue.latitude), \(locValue.longitude))"
+        print(self.currentLocation as String)
     }
     
     @IBAction func btnCloseTapped(_ sender: UIButton) {
@@ -160,7 +161,7 @@ class MenuViewController: UIViewController, CLLocationManagerDelegate, MKMapView
             refContacts.observe(.childAdded, with: { (snapshot) in
                 if snapshot.value as! Bool{
                     print("enviando mensaje de pánico a \(snapshot.key)")
-                    refMensajes.child("\(snapshot.key)").childByAutoId().setValue("\(currentUser): PÁNICO") // FALTA AÑADIR CURRENT LOCATION!!!!
+                    refMensajes.child("\(snapshot.key)").childByAutoId().setValue("\(currentUser): PÁNICO @ lat/lng: \(self.currentLocation as String)")
                 }
             }, withCancel: nil)
         }
