@@ -9,7 +9,11 @@ import UIKit
 
 class FilterSelector: UIViewController {
     
-    var filter = [true, true, true, true]
+    var filter = [true, //Acoso
+                  true, //Asalto
+                  true, //Violacion
+                  true  //Otro
+    ]
     
     @IBOutlet weak var type_1: UISwitch!
     @IBOutlet weak var type_2: UISwitch!

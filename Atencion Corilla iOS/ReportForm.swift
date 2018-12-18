@@ -31,27 +31,26 @@ class ReportForm: UIViewController {
             let key = refPin.childByAutoId().key
             
             //getting date time components split
+            let date = self.timeDate.date
             let calendar = Calendar.current
-            let components = calendar.dateComponents([.day,.month,.year,.hour,.minute], from: self.timeDate.date)
-            if let day = components.day, let month = components.month, let year = components.year, let hour = components.hour, let minute = components.minute {
-                let dayInt = Int(day)
-                let monthInt = Int(month)
-                let yearInt = Int(year)
-                let hourString = String(hour)
-                let minuteString = String(minute)
+            let dayInt       = calendar.component(.day, from: date)
+            let hourString   = String(calendar.component(.hour, from:date))
+            let minuteString = String(calendar.component(.minute, from:date))
+            let monthInt     = calendar.component(.month, from:date)
             
-            let pin = [ "id"       : key,
-                        "category" : category[incidentType.selectedSegmentIndex],
-                        "day"      : components.day,
-                        "hour"     : components.hour,
-                        "latitude" : reportPin?.coordinate.latitude,
-                        "longitude": reportPin?.coordinate.longitude,
-                        "minute"   : components.minute,
-                        "month"    : components.month,
-                        "year"     : components.year
-                ] as [String : Any]
+            
+                let pin = [ "id"       : key as Any ,
+                            "category" : category[incidentType.selectedSegmentIndex],
+                            "day"      : dayInt,
+                            "hour"     : hourString,
+                            "latitude" : reportPin?.coordinate.latitude as! Double,
+                            "longitude": reportPin?.coordinate.longitude as! Double,
+                            "minute"   : minuteString,
+                            "month"    : monthInt,
+                            "year"     : yearInt
+                    ] as [String : Any]
             refPin.child(key ?? "").setValue(pin)
-            }
+            
         }
     }
     
