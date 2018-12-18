@@ -37,14 +37,15 @@ class ReportForm: UIViewController {
             let hourString   = String(calendar.component(.hour, from:date))
             let minuteString = String(calendar.component(.minute, from:date))
             let monthInt     = calendar.component(.month, from:date)
+            let yearInt      = calendar.component(.year, from:date)
             
             
                 let pin = [ "id"       : key as Any ,
                             "category" : category[incidentType.selectedSegmentIndex],
                             "day"      : dayInt,
                             "hour"     : hourString,
-                            "latitude" : reportPin?.coordinate.latitude as! Double,
-                            "longitude": reportPin?.coordinate.longitude as! Double,
+                            "latitude" : Double((reportPin?.coordinate.latitude)!),
+                            "longitude": Double((reportPin?.coordinate.longitude)!),
                             "minute"   : minuteString,
                             "month"    : monthInt,
                             "year"     : yearInt
