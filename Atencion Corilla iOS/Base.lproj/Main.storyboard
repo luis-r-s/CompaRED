@@ -374,7 +374,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZNq-s8-HMy" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Gd9-Vw-jVz" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="310" y="2178"/>
+            <point key="canvasLocation" x="310" y="2141"/>
         </scene>
         <!--Report_Form-->
         <scene sceneID="zgp-cm-OQk">
@@ -436,7 +436,7 @@
                                     <segment title="Acoso"/>
                                     <segment title="Asalto"/>
                                     <segment title="Violacion"/>
-                                    <segment title="Categoria 4"/>
+                                    <segment title="Otro"/>
                                 </segments>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tf5-kz-LwL">
@@ -490,7 +490,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dVw-fA-lID" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="gUK-Ee-Bh9" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1324" y="1388"/>
+            <point key="canvasLocation" x="1089" y="1388"/>
         </scene>
         <!--CONTACTOS-->
         <scene sceneID="btp-VH-yGf">
