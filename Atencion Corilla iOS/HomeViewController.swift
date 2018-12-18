@@ -31,6 +31,9 @@ class HomeViewController: BaseViewController {
         showReports()
         checkLocationServices()
     }
+    @IBAction func refresh(_ sender: Any) {
+        showReports()
+    }
     
     @IBAction func unwindHome(_ sender: UIStoryboardSegue) {}
     
