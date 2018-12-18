@@ -45,8 +45,8 @@ class SignInViewController: UIViewController {
         if self.arrayEmails.contains(email){
             Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
                 if let error = error {
-                    print("EROR")
-                    AlertController.showAlert(self, title: "Error", message: error.localizedDescription)
+                    print("ERrOR")
+                    AlertController.showAlert(self, title: "Error", message: "Error: \(error.localizedDescription)")
                     return
                 } else {
                     guard let u = Auth.auth().currentUser else { return }

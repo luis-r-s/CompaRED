@@ -30,6 +30,8 @@ class MenuViewController: UIViewController, CLLocationManagerDelegate, MKMapView
     @IBOutlet weak var Mensajes: UIButton!
     @IBOutlet weak var Salir: UIButton!
     @IBOutlet weak var Panic: UIButton!
+    @IBOutlet weak var Escribir: UIButton!
+    @IBOutlet weak var Solicitudes: UIButton!
     
     
     override func viewDidLoad() {
@@ -115,6 +117,9 @@ class MenuViewController: UIViewController, CLLocationManagerDelegate, MKMapView
         performSegue(withIdentifier: "showContactos", sender: self)
     }
     
+    @IBAction func MensajesButtonTapped(_ sender: Any) {
+        performSegue(withIdentifier: "showMensajes", sender: self)
+    }
     
     @IBAction func SalirButtonTapped(_ sender: Any) {
         print("SalirButtonTapped")
