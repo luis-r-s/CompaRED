@@ -11,27 +11,38 @@ import Firebase
 import CoreData
 import FirebaseDatabase
 
-class MessagesViewController: BaseViewController, ContactsViewControllerDelegate{
+class MessagesViewController: BaseViewController, UITableViewDataSource, UITableViewDelegate{
     
-//    var sendTo : String!
-//    var sendFrom : String!
+    var mensajes = [String]()
+    
+    @IBOutlet weak var tableView: UITableView!
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        addSlideMenuButton()
+        fetchMensajes()
     }
     
-    func messageToFrom(to: String, from: String) {
-        let sendTo = to
-        let sendFrom = from
-        print("MessagesViewController")
-        print("from \(sendFrom) to \(sendTo)")
-        
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return mensajes.count
     }
     
-    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "mensajeCell", for: indexPath) as! MessagesTableViewCell
+        cell.mensajeLabel.text = mensajes[indexPath.row]
+        return cell
+    }
+
+    func fetchMensajes() {
+        mensajes = []
+        if let currentUser = Auth.auth().currentUser{
+            Database.database().reference().child("mensajes").child(currentUser.displayName!).observe(.childAdded, with: { (snapshot) in
+//                print(snapshot.value)
+                self.mensajes.append(snapshot.value as! String)
+                self.tableView.reloadData()
+            }, withCancel: nil)
+        }
+    }
 
 
-    
 }

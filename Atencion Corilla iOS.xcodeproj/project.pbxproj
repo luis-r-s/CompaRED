@@ -36,6 +36,7 @@
 		6E679149218E696D001B871D /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E679148218E696D001B871D /* AlertController.swift */; };
 		6E97338B21853E1500AE4834 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E97338A21853E1500AE4834 /* SignInViewController.swift */; };
 		6EAD4D1F217E2BBF0013D821 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6EAD4D1E217E2BBF0013D821 /* GoogleService-Info.plist */; };
+		8D85FE8721C93626004EEB27 /* MessagesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D85FE8621C93626004EEB27 /* MessagesTableViewCell.swift */; };
 		8DE05A5021C804D600547B99 /* AppIcon.appiconset in Resources */ = {isa = PBXBuildFile; fileRef = 8DE05A4F21C804D600547B99 /* AppIcon.appiconset */; };
 		8DE05A5321C83A1600547B99 /* SolicitudesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE05A5121C83A1600547B99 /* SolicitudesViewController.swift */; };
 		8DE05A5421C83A1600547B99 /* SolicitudesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE05A5221C83A1600547B99 /* SolicitudesTableViewCell.swift */; };
@@ -98,6 +99,7 @@
 		6E679148218E696D001B871D /* AlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		6E97338A21853E1500AE4834 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		6EAD4D1E217E2BBF0013D821 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8D85FE8621C93626004EEB27 /* MessagesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesTableViewCell.swift; sourceTree = "<group>"; };
 		8DE05A4F21C804D600547B99 /* AppIcon.appiconset */ = {isa = PBXFileReference; lastKnownFileType = folder; name = AppIcon.appiconset; path = Assets.xcassets/AppIcon.appiconset; sourceTree = "<group>"; };
 		8DE05A5121C83A1600547B99 /* SolicitudesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SolicitudesViewController.swift; sourceTree = "<group>"; };
 		8DE05A5221C83A1600547B99 /* SolicitudesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SolicitudesTableViewCell.swift; sourceTree = "<group>"; };
@@ -191,8 +193,6 @@
 		6E4C530D217CD0C0002CE7C1 /* Atencion Corilla iOS */ = {
 			isa = PBXGroup;
 			children = (
-				8DE05A5221C83A1600547B99 /* SolicitudesTableViewCell.swift */,
-				8DE05A5121C83A1600547B99 /* SolicitudesViewController.swift */,
 				8DE05A4F21C804D600547B99 /* AppIcon.appiconset */,
 				6E4C5312217CD0C0002CE7C1 /* Main.storyboard */,
 				6E4A753821B47BAE0009711E /* DataServices.swift */,
@@ -216,7 +216,10 @@
 				6E14774E2188012B008EC936 /* CompaRED.xcdatamodeld */,
 				6E4A753F21B4B1BF0009711E /* Constants.swift */,
 				6E4A754121B4BE6F0009711E /* ChatViewController.swift */,
+				8D85FE8621C93626004EEB27 /* MessagesTableViewCell.swift */,
 				6E43413621C191E30036CBC4 /* MessagesViewController.swift */,
+				8DE05A5221C83A1600547B99 /* SolicitudesTableViewCell.swift */,
+				8DE05A5121C83A1600547B99 /* SolicitudesViewController.swift */,
 			);
 			path = "Atencion Corilla iOS";
 			sourceTree = "<group>";
@@ -562,6 +565,7 @@
 				6E4C530F217CD0C0002CE7C1 /* AppDelegate.swift in Sources */,
 				6E1477502188012B008EC936 /* CompaRED.xcdatamodeld in Sources */,
 				6E1477522188098F008EC936 /* BaseViewController.swift in Sources */,
+				8D85FE8721C93626004EEB27 /* MessagesTableViewCell.swift in Sources */,
 				6E4A753221AB052C0009711E /* ContactsTableViewCell.swift in Sources */,
 				6E4A753421AB06D20009711E /* ContactsViewController.swift in Sources */,
 				6E679149218E696D001B871D /* AlertController.swift in Sources */,

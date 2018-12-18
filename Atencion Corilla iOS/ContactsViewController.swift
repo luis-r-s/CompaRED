@@ -11,18 +11,12 @@ import Firebase
 import CoreData
 import FirebaseDatabase
 
-//protocol ContactsViewControllerDelegate{
-//    func messageToFrom(to: String, from: String)
-//}
-
 class ContactsViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource, ContactsTableViewCellDelegate {
     
     
     @IBOutlet var tableView: UITableView!
     
     var friends = [String]()
-    
-    //    var delegate: ContactsViewControllerDelegate?
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return friends.count
@@ -38,9 +32,7 @@ class ContactsViewController: BaseViewController, UITableViewDelegate, UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
         addSlideMenuButton()
-        
         fetchContacts()
-        
     }
     
     func fetchContacts() {
@@ -61,14 +53,9 @@ class ContactsViewController: BaseViewController, UITableViewDelegate, UITableVi
         }
     }
     
-    
-    
     func tappedMessage(name: String) {
         print("Message \(name)")
         let sender = Auth.auth().currentUser!.displayName!
-        //        let other = name
-        //        delegate?.messageToFrom(to: other, from: sender)
-        //        print("to: \(other) from: \(sender)")
         
         let dialog = UIAlertController(title: "Mensaje Nuevo para \(name)", message: "Escribir mensaje", preferredStyle: .alert)
         
@@ -90,11 +77,9 @@ class ContactsViewController: BaseViewController, UITableViewDelegate, UITableVi
         dialog.addAction(addAction)
         
         present(dialog, animated: true)
-        
-        
+
     }
-    
-    
+
     func tappedDelete(name: String) {
         print("Delete \(name)")
         if let currentUser = Auth.auth().currentUser{
@@ -104,10 +89,3 @@ class ContactsViewController: BaseViewController, UITableViewDelegate, UITableVi
         }
     }
 }
-
-
-//extension ContactsViewController: ContactsTableViewCellDelegate {
-//
-//
-//
-//}

@@ -20,11 +20,13 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var AlreadyAccountButton: UIButton!
     
     var array = [String]()
+    var arrayEmails = [String]()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchUsers()
+        fetchEmails()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -53,6 +55,11 @@ class RegisterViewController: UIViewController {
             email != "" else {
                 AlertController.showAlert(self, title: "Falta información", message: "Favor de llenar todos los espacios")
                 return
+        }
+        
+        if self.arrayEmails.contains(email){
+            AlertController.showAlert(self, title: "Correo Electrónico no disponible", message: "Favor de escoger otro correo electrónico")
+            return
         }
         
         guard let password = PasswordTextField.text,
@@ -118,4 +125,13 @@ class RegisterViewController: UIViewController {
         }, withCancel: nil)
     }
     
+    func fetchEmails() {
+        Database.database().reference().child("users").observe(.childAdded, with: { (snapshot) in
+            let value = snapshot.value as? NSDictionary
+            let email = value?["email"] as? String ?? ""
+            print("value = \(email)")
+            self.arrayEmails.append(email)
+            print("array: \(self.arrayEmails)")
+        }, withCancel: nil)
+    }
 }

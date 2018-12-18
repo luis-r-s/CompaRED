@@ -49,7 +49,7 @@ class ReportForm: UIViewController {
                         "minute"   : components.minute,
                         "month"    : components.month,
                         "year"     : components.year
-                ]
+                ] as [String : Any]
             refPin.child(key ?? "").setValue(pin)
             }
         }

@@ -81,7 +81,7 @@ class MenuViewController: UIViewController, CLLocationManagerDelegate, MKMapView
         performSegue(withIdentifier: "showMapa", sender: self)
     }
     
-    @IBAction func MensajesButtonTapped(_ sender: Any) {
+    @IBAction func EscribirButtonTapped(_ sender: Any) {
         let dialog = UIAlertController(title: "Mensaje Nuevo", message: "Escribir mensaje", preferredStyle: .alert)
         
         dialog.addTextField()
@@ -130,6 +130,10 @@ class MenuViewController: UIViewController, CLLocationManagerDelegate, MKMapView
         
     }
     
+    @IBAction func SolicitudesButtonTapped(_ sender: Any){
+        performSegue(withIdentifier: "showSolicitudes", sender: self)
+    }
+    
     @IBAction func PanicButtonTapped(_ sender: Any)  {
         
         //        guard let locValue: CLLocationCoordinate2D = CLLocationManager.location!.coordinate else { return }
@@ -142,23 +146,20 @@ class MenuViewController: UIViewController, CLLocationManagerDelegate, MKMapView
         let addAction = UIAlertAction(title: "Enviar", style: .default) {
             [unowned self] action in
             
-            if let mensaje = dialog.textFields?.first?.text {
-                print(mensaje)
-                let ref = Database.database().reference()
-                let currentUser = Auth.auth().currentUser!.displayName!
-                let refContacts = ref.child("contacts").child(currentUser)
-                let refMensajes = ref.child("mensajes")
-                //                let currentLocation =
+            let ref = Database.database().reference()
+            let currentUser = Auth.auth().currentUser!.displayName!
+            let refContacts = ref.child("contacts").child(currentUser)
+            let refMensajes = ref.child("mensajes")
+            //                let currentLocation =
                 
-                refContacts.observe(.childAdded, with: { (snapshot) in
-                    if snapshot.value as! Bool{
-                        print("\(snapshot.key):\(mensaje)")
-                        refMensajes.child("\(snapshot.key)").childByAutoId().setValue("\(currentUser): PÁNICO @ lat/lng: \(self.currentLocation)")
-                    }
-                }, withCancel: nil)
-            }
+            refContacts.observe(.childAdded, with: { (snapshot) in
+                if snapshot.value as! Bool{
+                    print("enviando mensaje de pánico a \(snapshot.key)")
+                    refMensajes.child("\(snapshot.key)").childByAutoId().setValue("\(currentUser): PÁNICO") // FALTA AÑADIR CURRENT LOCATION!!!!
+                }
+            }, withCancel: nil)
         }
-        
+    
         dialog.addAction(addAction)
         
         present(dialog, animated: true)

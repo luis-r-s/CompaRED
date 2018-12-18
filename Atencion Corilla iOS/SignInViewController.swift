@@ -18,8 +18,11 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var SignInButton: UIButton!
     @IBOutlet weak var BackRegistrationButton: UIButton!
     
+    var arrayEmails = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        fetchEmails()
     }
     
     
@@ -39,19 +42,25 @@ class SignInViewController: UIViewController {
                 AlertController.showAlert(self, title: "Falta información", message: "Favor de llenar todos los espacios")
                 return
         }
-        
-        Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
-            guard error == nil else {
-                AlertController.showAlert(self, title: "Error", message: error!.localizedDescription)
-                return
-            }
-            guard let u = Auth.auth().currentUser else { return }
-            print(u.email ?? "MISSING EMAIL")
-            print(u.displayName ?? "MISSING DISPLAY NAME")
-            print(u.uid)
-            
-            self.performSegue(withIdentifier: "GoToHome2", sender: nil)
-        })
+        if self.arrayEmails.contains(email){
+            Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
+                if let error = error {
+                    print("EROR")
+                    AlertController.showAlert(self, title: "Error", message: error.localizedDescription)
+                    return
+                } else {
+                    guard let u = Auth.auth().currentUser else { return }
+                    print(u.email ?? "MISSING EMAIL")
+                    print(u.displayName ?? "MISSING DISPLAY NAME")
+                    print(u.uid)
+                    
+                    self.performSegue(withIdentifier: "GoToHome2", sender: nil)
+                }
+            })
+        } else{
+            AlertController.showAlert(self, title: "Información Incorrecta", message: "Favor de intentar nuevamente.")
+            return
+        }
     }
 
     
@@ -65,4 +74,13 @@ class SignInViewController: UIViewController {
         PasswordTextField.resignFirstResponder()
     }
 
+    func fetchEmails() {
+        Database.database().reference().child("users").observe(.childAdded, with: { (snapshot) in
+            let value = snapshot.value as? NSDictionary
+            let email = value?["email"] as? String ?? ""
+            print("value = \(email)")
+            self.arrayEmails.append(email)
+            print("array: \(self.arrayEmails)")
+        }, withCancel: nil)
+    }
 }
