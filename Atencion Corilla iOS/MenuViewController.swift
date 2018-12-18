@@ -161,7 +161,7 @@ class MenuViewController: UIViewController, CLLocationManagerDelegate, MKMapView
             refContacts.observe(.childAdded, with: { (snapshot) in
                 if snapshot.value as! Bool{
                     print("enviando mensaje de pánico a \(snapshot.key)")
-                    refMensajes.child("\(snapshot.key)").childByAutoId().setValue("\(currentUser): PÁNICO @ lat/lng: \(self.currentLocation as String)")
+                    refMensajes.child("\(snapshot.key)").childByAutoId().setValue("\(currentUser): PÁNICO @ lat/lng: \(self.currentLocation ?? "")")
                 }
             }, withCancel: nil)
         }

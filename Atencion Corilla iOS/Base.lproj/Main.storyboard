@@ -103,7 +103,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-705" y="546"/>
+            <point key="canvasLocation" x="-1463" y="548"/>
         </scene>
         <!--LOGIN-->
         <scene sceneID="pfr-iQ-ErQ">
@@ -176,7 +176,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pjT-Pb-vAr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-162" y="-260"/>
+            <point key="canvasLocation" x="-1138" y="-430"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="A49-aV-TPg">
@@ -374,7 +374,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZNq-s8-HMy" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Gd9-Vw-jVz" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="310" y="2141"/>
+            <point key="canvasLocation" x="310" y="2167"/>
         </scene>
         <!--Report_Form-->
         <scene sceneID="zgp-cm-OQk">
@@ -843,7 +843,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zQN-B5-Yzn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1090" y="-260"/>
+            <point key="canvasLocation" x="310" y="-291"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="EEl-V7-9AL">
@@ -934,7 +934,7 @@
             </objects>
             <point key="canvasLocation" x="3148" y="-1090"/>
         </scene>
-        <!--Solicitudes View Controller-->
+        <!--SOLICITUDES-->
         <scene sceneID="CTg-NB-ZCj">
             <objects>
                 <viewController id="FXP-76-IcU" customClass="SolicitudesViewController" customModule="Atencion_Corilla_iOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -1067,7 +1067,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="usv-Eg-IJM"/>
                     </view>
-                    <navigationItem key="navigationItem" id="prJ-03-5by"/>
+                    <navigationItem key="navigationItem" title="SOLICITUDES" id="prJ-03-5by"/>
                     <connections>
                         <outlet property="solicitud" destination="GAZ-5c-5u8" id="y4P-89-VSZ"/>
                         <outlet property="solicitudLabel" destination="v5q-qU-k8b" id="VOB-ko-oVc"/>
