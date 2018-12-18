@@ -138,7 +138,6 @@
                                         </state>
                                         <connections>
                                             <action selector="SignInTapped:" destination="XxF-8J-UPM" eventType="touchUpInside" id="wcl-Ut-DMW"/>
-                                            <segue destination="E9Q-uE-cfg" kind="show" identifier="GoToHome2" id="pdi-p5-0HF"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -172,6 +171,7 @@
                         <outlet property="EmailTextField" destination="JnE-2p-mBm" id="WV9-Uo-sgQ"/>
                         <outlet property="PasswordTextField" destination="TN8-If-1gO" id="Qw0-7p-i9Z"/>
                         <outlet property="SignInButton" destination="P8z-XS-LtQ" id="3JS-M7-Egm"/>
+                        <segue destination="E9Q-uE-cfg" kind="show" identifier="GoToHome2" id="o0s-U9-SE1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pjT-Pb-vAr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1107,7 +1107,7 @@
         <image name="solicitudes" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="30p-c7-AMJ"/>
-        <segue reference="9hk-u3-b2K"/>
+        <segue reference="o0s-U9-SE1"/>
+        <segue reference="5gz-Q2-CJa"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -119,9 +119,9 @@ class RegisterViewController: UIViewController {
     
     func fetchUsers() {
         Database.database().reference().child("users").observe(.childAdded, with: { (snapshot) in
-            print("snapshot.key = ", snapshot.key)
+//            print("snapshot.key = ", snapshot.key)
             self.array.append(snapshot.key)
-            print("array: \(self.array)")
+//            print("array: \(self.array)")
         }, withCancel: nil)
     }
     
@@ -129,9 +129,9 @@ class RegisterViewController: UIViewController {
         Database.database().reference().child("users").observe(.childAdded, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
             let email = value?["email"] as? String ?? ""
-            print("value = \(email)")
+//            print("value = \(email)")
             self.arrayEmails.append(email)
-            print("array: \(self.arrayEmails)")
+//            print("array: \(self.arrayEmails)")
         }, withCancel: nil)
     }
 }

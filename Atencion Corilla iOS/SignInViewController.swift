@@ -44,18 +44,21 @@ class SignInViewController: UIViewController {
         }
         if self.arrayEmails.contains(email){
             Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
-                if let error = error {
-                    print("ERROR")
-                    AlertController.showAlert(self, title: "Error", message: "Error: \(error.localizedDescription)")
-                    return
-                } else {
+                let errorMsg = error
+                print("ERROR\n", errorMsg as Any)
+                print(errorMsg == nil)
+                if  errorMsg == nil {
                     guard let u = Auth.auth().currentUser else { return }
                     print(u.email ?? "MISSING EMAIL")
                     print(u.displayName ?? "MISSING DISPLAY NAME")
                     print(u.uid)
-                    
+
                     self.performSegue(withIdentifier: "GoToHome2", sender: nil)
+                } else {
+                    AlertController.showAlert(self, title: "Error", message: "Favor de intentar nuevamente.")
+                    return
                 }
+                
             })
         } else{
             AlertController.showAlert(self, title: "Información Incorrecta", message: "Favor de intentar nuevamente.")
