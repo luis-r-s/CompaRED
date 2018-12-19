@@ -249,7 +249,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="Centralizar:" destination="sCF-sZ-7Lz" eventType="touchUpInside" id="x2K-8h-S8r"/>
                                     <action selector="refresh:" destination="sCF-sZ-7Lz" eventType="touchUpInside" id="yy4-Fz-8Xh"/>
                                 </connections>
                             </button>
