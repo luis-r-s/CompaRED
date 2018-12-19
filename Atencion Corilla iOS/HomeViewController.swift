@@ -15,12 +15,9 @@ class HomeViewController: BaseViewController {
     //Map
     @IBOutlet weak var mapView: MKMapView!
     
-    var filter = [true, true, true, true]
-    let type   = ["Acoso",
-                  "Asalto",
-                  "Violacion",
-                  "Otro"]
-    let color  = [0xff0000, 0x007fff, 0x00ffff, 0x00ff00]
+    var filter = [true    , true    , true       , true]
+    let type   = ["Acoso" , "Asalto", "Violacion", "Otro"]
+    let color  = [0xff0000, 0x007fff, 0x00ffff   , 0x00ff00]
     
     let locationManager = CLLocationManager()
     let regionSizeInMeters : Double = 100
@@ -50,8 +47,6 @@ class HomeViewController: BaseViewController {
         reportPin.coordinate = coordinates
         reportPin.title      = "Report Pin"
         reportPin.subtitle   = "Donde se reprota un incidente"
-        
-        
         
         self.mapView.addAnnotation(reportPin)
     }
@@ -83,18 +78,24 @@ class HomeViewController: BaseViewController {
                     let latitude = Object?["latitude"]
                     let longitude = Object?["longitude"]
                     
-                    //filtering
-                    for i in 0...3 {
-                    //checks if filter value for it is on
-                        if (cat as! String == self.type[i] && self.filter[i]==true){
+                    //filtering bool expresion to know wether or not to put in map
+                    var onMap : Bool = false
+                    for i in 0...3{
+                        if(cat as! String == self.type[i] && self.filter[i] == true){
+                            onMap = true
+                        }
+                    }
+                    
+                    //checks if filter will allow the pin on screen
+                    if (onMap){
+                    
                     //creating annotation with info from DB
-                            let annotation = MKPointAnnotation()
-                            annotation.title = cat as? String
-                            annotation.coordinate = CLLocationCoordinate2D(latitude: latitude as! CLLocationDegrees, longitude: longitude as! CLLocationDegrees)
+                        let annotation = MKPointAnnotation()
+                        annotation.title = cat as? String
+                        annotation.coordinate = CLLocationCoordinate2D(latitude: latitude as! CLLocationDegrees, longitude: longitude as! CLLocationDegrees)
                     
                     //put annotation in mapView
-                            self.mapView.addAnnotation(annotation)
-                        }
+                        self.mapView.addAnnotation(annotation)
                     }
                 }
             }
@@ -147,17 +148,18 @@ class HomeViewController: BaseViewController {
 
     
     override func prepare(for segue: UIStoryboardSegue, sender: (Any)?) {
-        var reportPin : MKAnnotation?
-        for annotation in mapView.annotations {
-            if (annotation.title == "Report Pin") {
-                reportPin = annotation
-            }
-        }
+        
         if segue.identifier == "ReportFormSegue" {
-        let destinationVC = segue.destination as? ReportForm
-        destinationVC?.reportPin = reportPin
+            var reportPin : MKAnnotation?
+            for annotation in mapView.annotations {
+                if (annotation.title == "Report Pin") {
+                    reportPin = annotation
+                }
+            }
+            let destinationVC = segue.destination as? ReportForm
+            destinationVC?.reportPin = reportPin
         }else{
-        let destinationF  = segue.destination as? FilterSelector
+            let destinationF  = segue.destination as? FilterSelector
             destinationF?.filter = filter
         }
     
