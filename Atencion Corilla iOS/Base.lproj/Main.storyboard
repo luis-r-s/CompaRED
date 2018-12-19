@@ -295,12 +295,16 @@
                         <subviews>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jh8-jL-hYP">
                                 <rect key="frame" x="312" y="135" width="51" height="31"/>
+                                <color key="onTintColor" red="1" green="0.3393321406" blue="0.72496652559999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9zy-le-GdV">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9zy-le-GdV">
                                 <rect key="frame" x="312" y="345" width="51" height="31"/>
+                                <color key="onTintColor" red="1" green="0.3393321406" blue="0.72496652559999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="thumbTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ynF-WR-Is6">
                                 <rect key="frame" x="312" y="449" width="51" height="31"/>
+                                <color key="onTintColor" red="1" green="0.3393321406" blue="0.72496652559999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Acoso" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T6Z-nr-czX">
                                 <rect key="frame" x="16" y="135" width="295" height="31"/>
@@ -343,8 +347,9 @@
                                     <segue destination="Gd9-Vw-jVz" kind="unwind" unwindAction="unwindHome:" id="5zt-ZU-uPH"/>
                                 </connections>
                             </button>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QzU-Ot-3qq">
-                                <rect key="frame" x="312" y="235" width="51" height="31"/>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QzU-Ot-3qq">
+                                <rect key="frame" x="310" y="235" width="51" height="31"/>
+                                <color key="onTintColor" red="1" green="0.3393321406" blue="0.72496652559999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -354,6 +359,7 @@
                             <constraint firstItem="MOM-fh-bKb" firstAttribute="trailing" secondItem="T6Z-nr-czX" secondAttribute="trailing" id="97g-rW-qbi"/>
                             <constraint firstItem="MOM-fh-bKb" firstAttribute="leading" secondItem="LlF-J5-xCh" secondAttribute="leading" id="9wq-8m-o33"/>
                             <constraint firstItem="MOM-fh-bKb" firstAttribute="top" secondItem="QzU-Ot-3qq" secondAttribute="top" id="CsL-D2-MGW"/>
+                            <constraint firstItem="ynF-WR-Is6" firstAttribute="top" secondItem="9zy-le-GdV" secondAttribute="bottom" constant="73" id="Czs-ml-sdn"/>
                             <constraint firstItem="MOM-fh-bKb" firstAttribute="leading" secondItem="t24-j4-2vi" secondAttribute="leading" id="Eqh-4t-huf"/>
                             <constraint firstItem="1u9-fw-aHc" firstAttribute="trailing" secondItem="QzU-Ot-3qq" secondAttribute="trailing" constant="16" id="Koy-9y-2md"/>
                             <constraint firstItem="Jh8-jL-hYP" firstAttribute="top" secondItem="T6Z-nr-czX" secondAttribute="top" id="LWB-G3-A4W"/>
@@ -364,6 +370,7 @@
                             <constraint firstItem="5C1-fe-bKF" firstAttribute="top" secondItem="1u9-fw-aHc" secondAttribute="top" constant="41" id="bfz-Jy-q9t"/>
                             <constraint firstItem="MOM-fh-bKb" firstAttribute="leading" secondItem="izT-zc-aBg" secondAttribute="leadingMargin" id="cwl-MT-hUy"/>
                             <constraint firstItem="MOM-fh-bKb" firstAttribute="trailing" secondItem="LlF-J5-xCh" secondAttribute="trailing" id="d05-LC-qOW"/>
+                            <constraint firstItem="9zy-le-GdV" firstAttribute="top" secondItem="QzU-Ot-3qq" secondAttribute="bottom" constant="79" id="hke-69-LFj"/>
                             <constraint firstItem="1u9-fw-aHc" firstAttribute="trailing" secondItem="ynF-WR-Is6" secondAttribute="trailing" constant="14" id="n89-2G-LU1"/>
                             <constraint firstItem="ynF-WR-Is6" firstAttribute="leading" secondItem="9zy-le-GdV" secondAttribute="leading" id="odY-iu-Mx7"/>
                             <constraint firstItem="MOM-fh-bKb" firstAttribute="trailing" secondItem="t24-j4-2vi" secondAttribute="trailing" id="pLk-vZ-ypz"/>
@@ -395,7 +402,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Formulario de Reporte" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="POg-T8-J4f">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Formulario de Reporte" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="POg-T8-J4f">
                                 <rect key="frame" x="64" y="103" width="192" height="46"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="1" green="0.3393321406" blue="0.72496652559999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -449,7 +456,7 @@
                                     <segue destination="gUK-Ee-Bh9" kind="unwind" unwindAction="unwindHome:" id="ETr-8D-HKa"/>
                                 </connections>
                             </button>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="OcN-Om-Q3b">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="OcN-Om-Q3b">
                                 <rect key="frame" x="46" y="222" width="283" height="29"/>
                                 <segments>
                                     <segment title="Acoso"/>
@@ -463,9 +470,12 @@
                         <constraints>
                             <constraint firstItem="bNh-WA-8AN" firstAttribute="trailing" secondItem="Zty-7d-N6i" secondAttribute="trailing" constant="150.5" id="0cD-Uk-0B6"/>
                             <constraint firstAttribute="bottom" secondItem="tf5-kz-LwL" secondAttribute="bottom" constant="20" symbolic="YES" id="4AL-Jo-GXK"/>
+                            <constraint firstItem="POg-T8-J4f" firstAttribute="centerX" secondItem="33t-NS-4BL" secondAttribute="centerX" id="6Fc-3x-Zc0"/>
+                            <constraint firstItem="hLa-KP-m5U" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bNh-WA-8AN" secondAttribute="leading" symbolic="YES" id="B4I-M1-Y0v"/>
                             <constraint firstItem="5g4-ok-oWs" firstAttribute="top" secondItem="RYZ-bt-heG" secondAttribute="top" constant="180" id="D4D-Ca-JK6"/>
                             <constraint firstItem="33t-NS-4BL" firstAttribute="top" secondItem="hLa-KP-m5U" secondAttribute="bottom" constant="8" symbolic="YES" id="DpZ-Be-8fc"/>
                             <constraint firstItem="hLa-KP-m5U" firstAttribute="trailing" secondItem="5g4-ok-oWs" secondAttribute="trailing" constant="-9" id="IKK-Rq-4Gq"/>
+                            <constraint firstItem="OcN-Om-Q3b" firstAttribute="top" secondItem="5g4-ok-oWs" secondAttribute="bottom" constant="8" symbolic="YES" id="N10-GI-EAK"/>
                             <constraint firstItem="bNh-WA-8AN" firstAttribute="trailing" secondItem="5g4-ok-oWs" secondAttribute="trailing" constant="190" id="Pt7-TR-gfX"/>
                             <constraint firstItem="OcN-Om-Q3b" firstAttribute="leading" secondItem="bNh-WA-8AN" secondAttribute="leading" constant="46" id="Znx-EC-H5a"/>
                             <constraint firstItem="Zty-7d-N6i" firstAttribute="leading" secondItem="bNh-WA-8AN" secondAttribute="leading" constant="150.5" id="aF1-IZ-duz"/>
