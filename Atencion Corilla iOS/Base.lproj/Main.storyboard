@@ -402,12 +402,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Formulario de Reporte" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="POg-T8-J4f">
-                                <rect key="frame" x="64" y="103" width="192" height="46"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" red="1" green="0.3393321406" blue="0.72496652559999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="33t-NS-4BL">
                                 <rect key="frame" x="0.0" y="314" width="320" height="162"/>
                                 <constraints>
@@ -445,6 +439,15 @@
                                     <segue destination="gUK-Ee-Bh9" kind="unwind" unwindAction="unwindHome:" id="gv8-Ch-3Q4"/>
                                 </connections>
                             </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="OcN-Om-Q3b">
+                                <rect key="frame" x="46" y="222" width="283" height="29"/>
+                                <segments>
+                                    <segment title="Acoso"/>
+                                    <segment title="Asalto"/>
+                                    <segment title="Violacion"/>
+                                    <segment title="Otro"/>
+                                </segments>
+                            </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tf5-kz-LwL">
                                 <rect key="frame" x="132" y="611" width="111" height="36"/>
                                 <color key="backgroundColor" red="1" green="0.3393321406" blue="0.72496652559999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -456,38 +459,36 @@
                                     <segue destination="gUK-Ee-Bh9" kind="unwind" unwindAction="unwindHome:" id="ETr-8D-HKa"/>
                                 </connections>
                             </button>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="OcN-Om-Q3b">
-                                <rect key="frame" x="46" y="222" width="283" height="29"/>
-                                <segments>
-                                    <segment title="Acoso"/>
-                                    <segment title="Asalto"/>
-                                    <segment title="Violacion"/>
-                                    <segment title="Otro"/>
-                                </segments>
-                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Formulario de Reporte" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="POg-T8-J4f">
+                                <rect key="frame" x="91.5" y="115" width="192" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="1" green="0.3393321406" blue="0.72496652559999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="bNh-WA-8AN" firstAttribute="trailing" secondItem="Zty-7d-N6i" secondAttribute="trailing" constant="150.5" id="0cD-Uk-0B6"/>
                             <constraint firstAttribute="bottom" secondItem="tf5-kz-LwL" secondAttribute="bottom" constant="20" symbolic="YES" id="4AL-Jo-GXK"/>
-                            <constraint firstItem="POg-T8-J4f" firstAttribute="centerX" secondItem="33t-NS-4BL" secondAttribute="centerX" id="6Fc-3x-Zc0"/>
+                            <constraint firstItem="POg-T8-J4f" firstAttribute="leading" secondItem="bNh-WA-8AN" secondAttribute="leading" constant="91.5" id="A34-rW-52f"/>
                             <constraint firstItem="hLa-KP-m5U" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bNh-WA-8AN" secondAttribute="leading" symbolic="YES" id="B4I-M1-Y0v"/>
                             <constraint firstItem="5g4-ok-oWs" firstAttribute="top" secondItem="RYZ-bt-heG" secondAttribute="top" constant="180" id="D4D-Ca-JK6"/>
                             <constraint firstItem="33t-NS-4BL" firstAttribute="top" secondItem="hLa-KP-m5U" secondAttribute="bottom" constant="8" symbolic="YES" id="DpZ-Be-8fc"/>
                             <constraint firstItem="hLa-KP-m5U" firstAttribute="trailing" secondItem="5g4-ok-oWs" secondAttribute="trailing" constant="-9" id="IKK-Rq-4Gq"/>
+                            <constraint firstItem="POg-T8-J4f" firstAttribute="top" secondItem="bNh-WA-8AN" secondAttribute="top" constant="95" id="Ko6-K2-Pj5"/>
                             <constraint firstItem="OcN-Om-Q3b" firstAttribute="top" secondItem="5g4-ok-oWs" secondAttribute="bottom" constant="8" symbolic="YES" id="N10-GI-EAK"/>
                             <constraint firstItem="bNh-WA-8AN" firstAttribute="trailing" secondItem="5g4-ok-oWs" secondAttribute="trailing" constant="190" id="Pt7-TR-gfX"/>
+                            <constraint firstItem="bNh-WA-8AN" firstAttribute="trailing" secondItem="POg-T8-J4f" secondAttribute="trailing" constant="91.5" id="UmL-Zv-woe"/>
                             <constraint firstItem="OcN-Om-Q3b" firstAttribute="leading" secondItem="bNh-WA-8AN" secondAttribute="leading" constant="46" id="Znx-EC-H5a"/>
                             <constraint firstItem="Zty-7d-N6i" firstAttribute="leading" secondItem="bNh-WA-8AN" secondAttribute="leading" constant="150.5" id="aF1-IZ-duz"/>
                             <constraint firstItem="33t-NS-4BL" firstAttribute="leading" secondItem="RYZ-bt-heG" secondAttribute="leading" id="bG1-aA-wqg"/>
-                            <constraint firstItem="POg-T8-J4f" firstAttribute="top" secondItem="bNh-WA-8AN" secondAttribute="top" constant="83" id="cXX-hU-FL2"/>
                             <constraint firstItem="tf5-kz-LwL" firstAttribute="leading" secondItem="bNh-WA-8AN" secondAttribute="leading" constant="132" id="deh-x6-4dx"/>
                             <constraint firstItem="bNh-WA-8AN" firstAttribute="trailing" secondItem="tf5-kz-LwL" secondAttribute="trailing" constant="132" id="dfg-VA-C8T"/>
                             <constraint firstItem="bNh-WA-8AN" firstAttribute="bottom" secondItem="33t-NS-4BL" secondAttribute="bottom" constant="191" id="exa-cb-hKx"/>
                             <constraint firstItem="Zty-7d-N6i" firstAttribute="top" secondItem="33t-NS-4BL" secondAttribute="bottom" constant="39" id="fnS-hU-hu8"/>
-                            <constraint firstItem="5g4-ok-oWs" firstAttribute="top" secondItem="POg-T8-J4f" secondAttribute="bottom" constant="31" id="mFs-kt-EFd"/>
                             <constraint firstItem="5g4-ok-oWs" firstAttribute="leading" secondItem="RYZ-bt-heG" secondAttribute="leadingMargin" id="py2-Vf-7uo"/>
                             <constraint firstItem="bNh-WA-8AN" firstAttribute="trailing" secondItem="OcN-Om-Q3b" secondAttribute="trailing" constant="46" id="tZp-Dj-qLM"/>
+                            <constraint firstItem="5g4-ok-oWs" firstAttribute="top" secondItem="POg-T8-J4f" secondAttribute="bottom" constant="41" id="xj6-AN-ky2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bNh-WA-8AN"/>
                     </view>
