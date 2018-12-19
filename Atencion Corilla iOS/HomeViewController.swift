@@ -20,7 +20,7 @@ class HomeViewController: BaseViewController {
     let color  = [0xff0000, 0x007fff, 0x00ffff   , 0x00ff00]
     
     let locationManager = CLLocationManager()
-    let regionSizeInMeters : Double = 100
+    let regionSizeInMeters : Double = 1000
     
     override func viewDidLoad() {
         super.viewDidLoad()

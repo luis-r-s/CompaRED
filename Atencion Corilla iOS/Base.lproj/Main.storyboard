@@ -296,14 +296,11 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jh8-jL-hYP">
                                 <rect key="frame" x="312" y="135" width="51" height="31"/>
                             </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9zy-le-GdV">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9zy-le-GdV">
                                 <rect key="frame" x="312" y="345" width="51" height="31"/>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ynF-WR-Is6">
                                 <rect key="frame" x="312" y="449" width="51" height="31"/>
-                            </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QzU-Ot-3qq">
-                                <rect key="frame" x="310" y="235" width="51" height="31"/>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Acoso" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T6Z-nr-czX">
                                 <rect key="frame" x="16" y="135" width="295" height="31"/>
@@ -346,6 +343,9 @@
                                     <segue destination="Gd9-Vw-jVz" kind="unwind" unwindAction="unwindHome:" id="5zt-ZU-uPH"/>
                                 </connections>
                             </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QzU-Ot-3qq">
+                                <rect key="frame" x="312" y="235" width="51" height="31"/>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -359,7 +359,6 @@
                             <constraint firstItem="Jh8-jL-hYP" firstAttribute="top" secondItem="T6Z-nr-czX" secondAttribute="top" id="LWB-G3-A4W"/>
                             <constraint firstItem="MOM-fh-bKb" firstAttribute="leading" secondItem="T6Z-nr-czX" secondAttribute="leading" id="M0v-vp-RyS"/>
                             <constraint firstItem="5C1-fe-bKF" firstAttribute="leading" secondItem="1u9-fw-aHc" secondAttribute="leading" constant="64" id="Pdx-dT-kUV"/>
-                            <constraint firstItem="ynF-WR-Is6" firstAttribute="top" secondItem="9zy-le-GdV" secondAttribute="bottom" constant="73" id="SsV-Be-ZkO"/>
                             <constraint firstItem="LlF-J5-xCh" firstAttribute="top" secondItem="ynF-WR-Is6" secondAttribute="top" id="Wqz-EI-njo"/>
                             <constraint firstItem="MOM-fh-bKb" firstAttribute="top" secondItem="T6Z-nr-czX" secondAttribute="bottom" constant="69" id="XzI-qv-YdQ"/>
                             <constraint firstItem="5C1-fe-bKF" firstAttribute="top" secondItem="1u9-fw-aHc" secondAttribute="top" constant="41" id="bfz-Jy-q9t"/>
@@ -476,8 +475,6 @@
                             <constraint firstItem="hLa-KP-m5U" firstAttribute="trailing" secondItem="5g4-ok-oWs" secondAttribute="trailing" constant="-9" id="IKK-Rq-4Gq"/>
                             <constraint firstItem="Zty-7d-N6i" firstAttribute="top" secondItem="33t-NS-4BL" secondAttribute="bottom" constant="39" id="K1t-I4-AVK"/>
                             <constraint firstItem="bNh-WA-8AN" firstAttribute="trailing" secondItem="5g4-ok-oWs" secondAttribute="trailing" constant="190" id="Pt7-TR-gfX"/>
-                            <constraint firstItem="tf5-kz-LwL" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Zty-7d-N6i" secondAttribute="leading" id="Py0-kr-k12"/>
-                            <constraint firstItem="tf5-kz-LwL" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Zty-7d-N6i" secondAttribute="trailing" id="QL4-IO-hfL"/>
                             <constraint firstItem="33t-NS-4BL" firstAttribute="leading" secondItem="RYZ-bt-heG" secondAttribute="leading" id="bG1-aA-wqg"/>
                             <constraint firstItem="Zty-7d-N6i" firstAttribute="centerX" secondItem="33t-NS-4BL" secondAttribute="centerX" id="bSr-vJ-Eb3"/>
                             <constraint firstItem="POg-T8-J4f" firstAttribute="top" secondItem="bNh-WA-8AN" secondAttribute="top" constant="106" id="cXX-hU-FL2"/>
